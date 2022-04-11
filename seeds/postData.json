@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Coding with Javascript",
+        "contents": "Javascript is the first coding language I learned but it's insane how much coding you are able to do only with JS. Check out this game I made with only Javascript!",
+        "user_id": 1
+    },
+    {
+        "title": "HTML and CSS",
+        "contents": "I can't seem to understand why HTML is so fun to do but CSS just takes forever to get it exactly how I want it.",
+        "user_id": 2
+    },
+    {
+        "title": "Sql",
+        "contents": "Does anyone else get the sql prompt popping up at midnight and updating out of nowhere?? Or is that just me.",
+        "user_id": 3
+    }
+]
