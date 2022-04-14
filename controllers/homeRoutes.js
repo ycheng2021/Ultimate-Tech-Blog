@@ -37,8 +37,6 @@ router.get('/', async (req, res) => {
 
 // new/post route to get the form to make new post, use withAuth
 
-// search a post by the term
-
 // redirect to login if not logged in
 router.get('/login', (req, res) => {
     // If the user is already logged in, redirect the request to another route
