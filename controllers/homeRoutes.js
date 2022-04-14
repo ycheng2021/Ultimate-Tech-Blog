@@ -23,16 +23,21 @@ router.get('/', async (req, res) => {
       const posts = postData.map((post) => post.get({ plain: true }));
   
       // Pass serialized data and session flag into template
-    //   res.render('homepage', { 
-    //     posts, 
-    //     logged_in: req.session.logged_in 
-    //   });
+      res.render('homepage', { 
+        posts, 
+        logged_in: req.session.logged_in 
+      });
       res.json(posts)
     } catch (err) {
       res.status(500).json(err);
     }
   });
-// post comment
+
+// get post by id 
+
+// new/post route to get the form to make new post, use withAuth
+
+// search a post by the term
 
 // redirect to login if not logged in
 router.get('/login', (req, res) => {
