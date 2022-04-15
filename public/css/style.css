@@ -1,0 +1,17 @@
+nav a {
+    margin-left: 15px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.logo {
+    text-decoration: none;
+}
+
+.right-title {
+    float: right;
+}
+.logout-button {
+    cursor: pointer;
+    color: #551A8B
+}
