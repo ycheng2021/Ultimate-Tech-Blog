@@ -11,15 +11,15 @@
 
 <body>
   <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
+    <header class="display-flex justify-space-between align-center p-2 nav">
       <h1>
         <a class="logo" href="/">Ultimate Tech Blog</a>
       </h1>
       <nav>
         <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
         <a class="home" href="/">Home</a>
         <a class="dashboard" href="/new/post">New Post</a> 
+        {{#if logged_in}}
         <a class="logout-button" id="logout">Logout</a>
         {{else}}
         <a class="login-button" href="/login">Login</a>

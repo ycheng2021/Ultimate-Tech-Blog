@@ -1,14 +1,9 @@
 {{#each posts as |post| }}
-<div class="card post-cards">
-  <div class="card-header">
+  <a href="#" class="text-decor"><div class="post-cards" data-id="{{post.id}}">  
     <span>{{post.title}}</span>
-    <span class="right-title">Posted by {{post.user.username}} on {{format_date post.createdAt}}</span>
-  </div>
-  <div class="card-body">
-    <p class="card-text">{{post.contents}}</p>
-  </div>
-</div>
+    <span class="right-title">Posted on {{format_date post.createdAt}}</span>
+  </div></a>
 {{/each}}
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-{{!-- <script src="post.js"></script>  --}}
+<script src="/js/homepage.js"></script> 
