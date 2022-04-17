@@ -1,17 +1,62 @@
+.nav {
+    background-color: rgb(170, 88, 247);
+}
+
 nav a {
     margin-left: 15px;
     text-decoration: none;
     font-size: 20px;
+    color: white;
 }
 
 .logo {
     text-decoration: none;
+    color: white;
 }
 
 .right-title {
     float: right;
 }
+
 .logout-button {
     cursor: pointer;
-    color: #551A8B
+    color: white;
+}
+
+.post-cards {
+    background-color: rgb(170, 88, 247);
+    border: 1px black solid;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    padding: 10px;
+    color: white;
+}
+
+.submit-btn,
+.signup-btn,
+.login-btn {
+    color: white !important;
+    background-color: rgb(170, 88, 247) !important;
+}
+.loginform,
+.signupform {
+    color: rgb(170, 88, 247);
+}
+
+.signup-link {
+    color: rgb(170, 88, 247) !important;
+}
+
+.text-decor {
+    text-decoration: none;
+}
+
+.card-header {
+    background-color: rgb(170, 88, 247) !important;
+    border-bottom: 2px white solid;
+}
+
+.post-title {
+    font-size: 20px;
+    color: white;
 }
