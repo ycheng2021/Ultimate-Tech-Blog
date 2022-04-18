@@ -1,8 +1,13 @@
 {{#each posts as |post| }}
-  <a href="#" class="text-decor"><div class="post-cards" data-id="{{post.id}}">  
-    <span>{{post.title}}</span>
-    <span class="right-title">Posted on {{format_date post.createdAt}}</span>
-  </div></a>
+  <div class="card post-cards">
+  <div class="card-header">
+    <span class="post-title">{{post.title}}</span>
+    <span class="right-title post-title">Posted on {{format_date post.createdAt}}</span>
+  </div>
+  <div class="card-body">
+    <p class="card-text">{{post.contents}}</p>
+  </div>
+</div>
 {{/each}}
 
 <div class="form-group">

@@ -87,29 +87,30 @@ router.get('/new/post', withAuth, async (req, res) => {
 // route for dashboard
 router.get('/user/posts', withAuth, async (req, res) => {
   try {
-    const postData = await Post.findAll(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ['username'],
-        },
-        {
-          model: Comment,
-          attributes: ['contents']
-        }
-      ]
+    const postData = await Post.findAll({
+      where: {
+        user_id: req.session.user_id
+      }
     });
-    console.log(postData)
     // Serialize data so the template can read it
     const posts = postData.map((post) => post.get({ plain: true }));
 
     res.render('dashboard', { 
-        ...posts,
+        posts,
         logged_in : req.session.logged_in
     });
-    // res.json(posts)
+    // res.json(postData)
   } catch (err) {
     res.status(500).json(err);
+  }
+})
+
+router.get('/comments', async (req,res) => {
+  try {
+    const commentData = await Comment.findAll()
+    res.json(commentData)
+  } catch(err) {
+    res.status(500).json(err)
   }
 })
 
