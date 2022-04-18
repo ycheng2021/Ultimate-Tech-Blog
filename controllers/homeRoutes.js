@@ -83,6 +83,36 @@ router.get('/new/post', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 })
+
+// route for dashboard
+router.get('/user/posts', withAuth, async (req, res) => {
+  try {
+    const postData = await Post.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['username'],
+        },
+        {
+          model: Comment,
+          attributes: ['contents']
+        }
+      ]
+    });
+
+    // Serialize data so the template can read it
+    const post = postData.get({ plain: true });
+
+    res.render('dashboard', { 
+        ...post,
+        logged_in : req.session.logged_in
+    });
+    // res.json(car)
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
+
 // redirect to login if not logged in
 router.get('/login', (req, res) => {
     // If the user is already logged in, redirect the request to another route
