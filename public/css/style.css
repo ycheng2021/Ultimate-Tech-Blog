@@ -32,12 +32,15 @@ nav a {
     color: white;
 }
 
+.update-btn,
+.newPost-btn,
 .comment-btn,
 .submit-btn,
 .signup-btn,
 .login-btn {
     color: white !important;
     background-color: rgb(170, 88, 247) !important;
+    margin-bottom: 5px;
 }
 .loginform,
 .signupform {
