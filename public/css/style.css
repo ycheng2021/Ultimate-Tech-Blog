@@ -32,6 +32,7 @@ nav a {
     color: white;
 }
 
+.comment-btn,
 .submit-btn,
 .signup-btn,
 .login-btn {
@@ -59,4 +60,13 @@ nav a {
 .post-title {
     font-size: 20px;
     color: white;
+}
+
+.comment-box {
+    display: none;
+}
+
+.commentsubmit-btn {
+    background-color: white !important;
+    color:rgb(170, 88, 247) !important;
 }

@@ -1,0 +1,12 @@
+{{#each posts as |post| }}
+  <a href="#" class="text-decor"><div class="post-cards" data-id="{{post.id}}">  
+    <span>{{post.title}}</span>
+    <span class="right-title">Posted on {{format_date post.createdAt}}</span>
+  </div></a>
+{{/each}}
+
+<div class="form-group">
+    <button class="btn btn-primary newPost-btn" type="submit">+ New Post</button>
+</div>
+
+<script src="/js/dashboard.js"></script>
