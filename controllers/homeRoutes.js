@@ -87,7 +87,7 @@ router.get('/new/post', withAuth, async (req, res) => {
 // route for dashboard
 router.get('/user/posts', withAuth, async (req, res) => {
   try {
-    const postData = await Post.findByPk(req.params.id, {
+    const postData = await Post.findAll(req.params.id, {
       include: [
         {
           model: User,
@@ -101,7 +101,7 @@ router.get('/user/posts', withAuth, async (req, res) => {
     });
 
     // Serialize data so the template can read it
-    const post = postData.get({ plain: true });
+    const post = postData.map((post) => post.get({ plain: true }));
 
     res.render('dashboard', { 
         ...post,
