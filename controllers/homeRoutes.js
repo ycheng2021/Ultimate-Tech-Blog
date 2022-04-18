@@ -53,19 +53,14 @@ router.get('/post/:id', async (req, res) => {
           model: User,
           attributes: ['username'],
         },
-        {
-          model: Comment,
-          attributes: ['contents']
-        }
       ]
     });
-  
     // Serialize data so the template can read it
     const post = postData.get({ plain: true });
 
     // Pass serialized data and session flag into template
     res.render('singlepost', { 
-      post, 
+      post,
       logged_in: req.session.logged_in 
     });
   } catch (err) {
@@ -105,7 +100,7 @@ router.get('/user/posts', withAuth, async (req, res) => {
   }
 })
 
-// get the comments by the post id
+// // get the comments by the post id
 // router.get('/comments', async (req,res) => {
 //   try {
 //     const commentData = await Comment.findAll({

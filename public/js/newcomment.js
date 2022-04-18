@@ -10,12 +10,16 @@ commentButton.addEventListener('click', function() {
 const submitFormHandler = async (event) => {
     event.preventDefault();
     
+    const id = window.location.toString().split('/')[
+        window.location.toString().split('/').length - 1
+    ];
+    const post_id = id;
     const contents = document.querySelector('#comment-content').value.trim();
 
     if (contents) {
         const response = await fetch('/api/comments', {
         method: 'POST',
-        body: JSON.stringify({ contents }),
+        body: JSON.stringify({ post_id, contents }),
         headers: { 'Content-Type': 'application/json' },
         });
 
