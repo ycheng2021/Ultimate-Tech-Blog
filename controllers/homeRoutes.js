@@ -59,7 +59,7 @@ router.get('/post/:id', async (req, res) => {
         }
       ]
     });
-
+  
     // Serialize data so the template can read it
     const post = postData.get({ plain: true });
 
@@ -105,14 +105,19 @@ router.get('/user/posts', withAuth, async (req, res) => {
   }
 })
 
-router.get('/comments', async (req,res) => {
-  try {
-    const commentData = await Comment.findAll()
-    res.json(commentData)
-  } catch(err) {
-    res.status(500).json(err)
-  }
-})
+// get the comments by the post id
+// router.get('/comments', async (req,res) => {
+//   try {
+//     const commentData = await Comment.findAll({
+//       where: {
+//         post_id: req.params.post_id
+//       }
+//     })
+//     res.json(commentData)
+//   } catch(err) {
+//     res.status(500).json(err)
+//   }
+// })
 
 // redirect to login if not logged in
 router.get('/login', (req, res) => {
