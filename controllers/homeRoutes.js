@@ -99,15 +99,15 @@ router.get('/user/posts', withAuth, async (req, res) => {
         }
       ]
     });
-
+    console.log(postData)
     // Serialize data so the template can read it
-    const post = postData.map((post) => post.get({ plain: true }));
+    const posts = postData.map((post) => post.get({ plain: true }));
 
     res.render('dashboard', { 
-        ...post,
+        ...posts,
         logged_in : req.session.logged_in
     });
-    // res.json(car)
+    // res.json(posts)
   } catch (err) {
     res.status(500).json(err);
   }
