@@ -67,6 +67,7 @@ router.get('/:id', async (req, res) => {
     res.status(500).json(err);
   }
 })
+
 // new/post route to get the form to make new post, use withAuth
 router.get('/new/post', withAuth, async (req, res) => {
   try {
@@ -99,20 +100,6 @@ router.get('/user/posts', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 })
-
-// // get the comments by the post id
-// router.get('/comments', async (req,res) => {
-//   try {
-//     const commentData = await Comment.findAll({
-//       where: {
-//         post_id: req.params.post_id
-//       }
-//     })
-//     res.json(commentData)
-//   } catch(err) {
-//     res.status(500).json(err)
-//   }
-// })
 
 // redirect to login if not logged in
 router.get('/login', (req, res) => {

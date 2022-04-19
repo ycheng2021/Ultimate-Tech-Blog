@@ -1,8 +1,9 @@
 const commentBox = document.querySelector('.comment-box');
+const comments = document.querySelector('.container')
 
-// addComment.addEventListener('click', function() {
-//     commentBox.style.display= "block"
-// })
+comments.addEventListener('click', function() {
+    commentBox.style.display= "block"
+})
 
 // submit comment function
 const submitFormHandler = async (event) => {
