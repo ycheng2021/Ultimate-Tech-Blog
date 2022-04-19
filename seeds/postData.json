@@ -1,17 +1,37 @@
 [
     {
-        "title": "Coding with Javascript",
-        "contents": "Javascript is the first coding language I learned but it's insane how much coding you are able to do only with JS. Check out this game I made with only Javascript!",
+        "title": "Artificial intelligence is creating a new colonial world order",
+        "contents": "An MIT Technology Review series investigates how AI is enriching a powerful few by dispossessing communities that have been dispossessed before.",
         "user_id": 1
     },
     {
-        "title": "HTML and CSS",
-        "contents": "I can't seem to understand why HTML is so fun to do but CSS just takes forever to get it exactly how I want it.",
+        "title": "How connectivity goes hand in hand with business growth",
+        "contents": "Starting with introducing the foundational technologies and going through improving the customer experience, the mantra has always remained the same — how can we drive business value?Automation, AI, data and analytics are vital components of a transformation. These digital solutions, along with new ways of working, truly enable transformational capabilities and unlock long-term value. ",
         "user_id": 2
     },
     {
-        "title": "Sql",
-        "contents": "Does anyone else get the sql prompt popping up at midnight and updating out of nowhere?? Or is that just me.",
+        "title": "How companies are investing in data and analytics",
+        "contents": "Investments have paralleled advancements in AI coupled with analytics. The pandemic pushed forward certain AI use cases like conversational agents. However, there still is a gap in organizational trust and measuring ROI from AI initiatives.",
         "user_id": 3
+    },
+    {
+        "title": "Increase your limits: how to capture value from the industry cloud",
+        "contents": "Fully digitalized cloud solutions aren’t just improving cost-effectiveness while integrating workflows across the organization in real time; they are also lowering the barriers to entry in many markets and shifting the competitive landscape. Companies that are slow to respond will quickly become obsolete.",
+        "user_id": 4
+    },
+    {
+        "title": "How building your tech ecosystem fuels innovation and growth opportunities",
+        "contents": "Your business can be so much more than the sum of what goes on inside your four walls. Indeed, with cloud enablement, the sky’s the limit, and you can expand your ecosystem to welcome new alliance partners who will help you innovate and create more value for your customers. Ecosystem development requires thoughtful planning and careful integration but offers the opportunity to deliver wide-ranging benefits.  ",
+        "user_id": 5
+    },
+    {
+        "title": "How digital transformation is driving a shift in talent and culture",
+        "contents": "As with the myriad other challenges IT organizations face, seeding and cultivating a mix of technical and business-savvy talent will be a key differentiator that could define an organization’s ability to compete successfully in the digital era.",
+        "user_id": 6
+    },
+    {
+        "title": "Effective risk management is not risk avoidance",
+        "contents": "People have a strange relationship with risk. Most of us prefer to avoid it – consistently choosing a sure outcome over a gamble with equal or higher expected value. Yet success in nearly everything involves taking risk.",
+        "user_id": 7
     }
 ]
