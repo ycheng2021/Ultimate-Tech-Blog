@@ -1,8 +1,8 @@
 {{#each posts as |post| }}
-  <div class="post-cards" data-id="{{post.id}}">  
+   <a href="/{{post.id}}" class="text-decor"><div class="post-cards" data-id="{{post.id}}">  
     <span>{{post.title}}</span>
     <span class="right-title post-title">Posted on {{format_date post.createdAt}}</span>
-  </div>
+  </div></a>
 {{/each}}
 
 <div class="form-group">

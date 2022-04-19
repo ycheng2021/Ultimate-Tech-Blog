@@ -25,13 +25,23 @@ nav a {
 
 .post-cards {
     background-color: rgb(170, 88, 247);
-    border: 1px black solid;
-    border-radius: 4px;
-    margin-bottom: 5px;
+    border: 1px rgb(86, 39, 131) solid;
+    border-radius: 10px;
+    margin-bottom: 20px;
     padding: 10px;
     color: white;
 }
 
+.sidebyside {
+    display: flex;
+}
+
+.delete-btn,
+.update-btn {
+    margin-right: 10px;
+}
+
+.delete-btn,
 .update-btn,
 .newPost-btn,
 .comment-btn,
