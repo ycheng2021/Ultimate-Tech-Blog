@@ -45,7 +45,7 @@ router.get('/signup', (req, res) => {
 });
 
 // get post by id 
-router.get('/post/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
       include: [
@@ -53,25 +53,21 @@ router.get('/post/:id', async (req, res) => {
           model: User,
           attributes: ['username'],
         },
-        {
-          model: Comment,
-          attributes: ['contents']
-        }
       ]
     });
-
     // Serialize data so the template can read it
     const post = postData.get({ plain: true });
 
     // Pass serialized data and session flag into template
     res.render('singlepost', { 
-      post, 
+      post,
       logged_in: req.session.logged_in 
     });
   } catch (err) {
     res.status(500).json(err);
   }
 })
+
 // new/post route to get the form to make new post, use withAuth
 router.get('/new/post', withAuth, async (req, res) => {
   try {
@@ -87,27 +83,19 @@ router.get('/new/post', withAuth, async (req, res) => {
 // route for dashboard
 router.get('/user/posts', withAuth, async (req, res) => {
   try {
-    const postData = await Post.findAll(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ['username'],
-        },
-        {
-          model: Comment,
-          attributes: ['contents']
-        }
-      ]
+    const postData = await Post.findAll({
+      where: {
+        user_id: req.session.user_id
+      }
     });
-    console.log(postData)
     // Serialize data so the template can read it
     const posts = postData.map((post) => post.get({ plain: true }));
 
     res.render('dashboard', { 
-        ...posts,
+        posts,
         logged_in : req.session.logged_in
     });
-    // res.json(posts)
+    // res.json(postData)
   } catch (err) {
     res.status(500).json(err);
   }

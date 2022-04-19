@@ -1,15 +1,14 @@
-const commentButton = document.querySelector('.comment-btn');
 const commentBox = document.querySelector('.comment-box');
+const comments = document.querySelector('.container')
 
-commentButton.addEventListener('click', function() {
-    commentButton.style.display = "none"
+comments.addEventListener('click', function() {
     commentBox.style.display= "block"
 })
 
 // submit comment function
 const submitFormHandler = async (event) => {
     event.preventDefault();
-    
+
     const contents = document.querySelector('#comment-content').value.trim();
 
     if (contents) {
@@ -31,3 +30,4 @@ const submitFormHandler = async (event) => {
 document
 .querySelector('.newcomment')
 .addEventListener('submit', submitFormHandler);
+

@@ -1,4 +1,4 @@
-<div class="card post-cards">
+<div class="card post-cards post-card">
   <div class="card-header">
     <span class="post-title">{{post.title}}</span>
     <span class="right-title post-title">Posted by {{post.user.username}} on {{format_date post.createdAt}}</span>
@@ -7,18 +7,37 @@
     <p class="card-text">{{post.contents}}</p>
   </div>
 </div>
-<div>
-  <button class="btn btn-primary comment-btn" type="submit">+ Comment</button>
-</div>
-<div class="card post-cards comment-box">
-  <form class="newcomment">
-    <div class="form-group">
-        <textarea class="form-control" rows="4" cols="50" id="comment-content" placeholder="Comment goes here..."></textarea>
+
+  <div class="sidebyside">
+    <div>
+    <button class="btn btn-primary update-btn" type="submit">Update Post</button>
     </div>
     <div class="form-group">
-      <button class="btn btn-primary commentsubmit-btn" type="submit">Submit</button>
+      <button class="btn btn-primary delete-btn" data-id="{{post.id}}" type="submit">Delete</button>
+    </div>
+  </div>
+
+<div class="card post-cards update-box">
+  <form class="updatepost">
+     <label for="title">
+      Title:
+    </label>
+    <br />
+    <textarea id="update-title" rows="2" cols="30">
+      {{post.title}}
+    </textarea>
+    <br />
+    <label for="content">
+      Content:
+    </label>
+    <br />
+    <textarea id="update-content" name="contents" rows="5" cols="30">
+      {{post.contents}}
+    </textarea>
+    <div class="form-group">
+      <button class="btn btn-primary postupdate-btn" type="submit">Submit</button>
     </div>
   </form>
 </div>
 
-<script src="/js/comment.js"></script>
+<script src="/js/update-delete.js"></script>

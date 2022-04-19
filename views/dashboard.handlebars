@@ -1,7 +1,7 @@
 {{#each posts as |post| }}
-  <a href="#" class="text-decor"><div class="post-cards" data-id="{{post.id}}">  
+   <a href="/{{post.id}}" class="text-decor"><div class="post-cards" data-id="{{post.id}}">  
     <span>{{post.title}}</span>
-    <span class="right-title">Posted on {{format_date post.createdAt}}</span>
+    <span class="right-title post-title">Posted on {{format_date post.createdAt}}</span>
   </div></a>
 {{/each}}
 
