@@ -77,6 +77,35 @@ router.get('/user/posts', withAuth, async (req, res) => {
   }
 })
 
+// route for page to add comments
+router.get('/posts/:id', withAuth, async (req, res) => {
+  try {
+    const postData = await Post.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['username'],
+        },
+        {
+          model: Comment,
+          attributes: ['contents']
+        }
+      ]
+    });
+    // Serialize data so the template can read it
+    const post = postData.get({ plain: true });
+    res.render('addComment', { 
+        post,
+        logged_in : req.session.logged_in
+    });
+    // res.json(posts)
+  } catch (err) {
+    console.log(err)
+    res.status(500).json(err);
+  }
+})
+
+
 // redirect to login if not logged in
 router.get('/login', (req, res) => {
     // If the user is already logged in, redirect the request to another route

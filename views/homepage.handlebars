@@ -1,5 +1,5 @@
 {{#each posts as |post| }}
-  <a href="/{{post.id}}" class="text-decor">
+  <a href="/posts/{{post.id}}" class="text-decor">
     <div class="card post-cards">  
       <div class="card-header" data-id="{{post.id}}">
         <span>{{post.title}}</span>
@@ -8,16 +8,6 @@
       <div class="card-body">
         <p class="card-text">{{post.contents}}</p>
       </div>
-    </div>
-    <div class="card post-cards comment-box" data-id="{{post.id}}">
-      <form class="newcomment">
-        <div class="form-group">
-            <textarea class="form-control" rows="4" cols="50" id="comment-content" placeholder="Comment goes here..."></textarea>
-        </div>
-        <div class="form-group">
-          <button class="btn btn-primary commentsubmit-btn" type="submit">Submit</button>
-        </div>
-      </form>
     </div>
   </a>
 {{/each}}
