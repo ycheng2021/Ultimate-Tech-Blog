@@ -32,7 +32,7 @@ const updateFormHandler = async (event) => {
         });
 
         if (response.ok) {
-        document.location.replace(`/post/${id}`);
+        document.location.replace(`/${id}`);
         } else {
         alert('Failed to edit post.');
         }

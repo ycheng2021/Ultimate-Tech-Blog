@@ -44,30 +44,6 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
-// get post by id 
-router.get('/post/:id', async (req, res) => {
-  try {
-    const postData = await Post.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ['username'],
-        },
-      ]
-    });
-    // Serialize data so the template can read it
-    const post = postData.get({ plain: true });
-
-    // Pass serialized data and session flag into template
-    res.render('singlepost', { 
-      post,
-      logged_in: req.session.logged_in 
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-})
-
 // new/post route to get the form to make new post, use withAuth
 router.get('/new/post', withAuth, async (req, res) => {
   try {
@@ -104,13 +80,46 @@ router.get('/user/posts', withAuth, async (req, res) => {
 // redirect to login if not logged in
 router.get('/login', (req, res) => {
     // If the user is already logged in, redirect the request to another route
+    try {
     if (req.session.logged_in) {
       res.redirect('/');
       return;
     }
   
     res.render('login');
+    } catch(err) {
+      console.log(err)
+    }
   });
   
+
+// get post by id 
+router.get('/:id', async (req, res) => {
+  try {
+    const postData = await Post.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['username'],
+        },
+        {
+          model: Comment,
+          attributes: ['contents']
+        }
+      ]
+    });
+    // Serialize data so the template can read it
+    const post = postData.get({ plain: true });
+    console.log(post)
+    // Pass serialized data and session flag into template
+    res.render('singlepost', { 
+      post,
+      logged_in: req.session.logged_in 
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
+
   module.exports = router;
   
