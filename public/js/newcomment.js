@@ -2,8 +2,9 @@ const commentButton = document.querySelector('.addComment-btn');
 const commentBox = document.querySelector('.comment-box')
 
 commentButton.addEventListener('click', function() {
-    commentButton.style.display = "none"
-    commentBox.style.display = "block"
+    commentButton.style.display = "none";
+    commentBox.style.display = "block";
+    console.log("this button is working")
 })
 
 // submit comment function
