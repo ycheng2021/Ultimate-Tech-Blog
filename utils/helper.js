@@ -4,3 +4,5 @@ module.exports = {
       return date.toLocaleDateString();
     },
 };
+
+// change models to lowercase"
