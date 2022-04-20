@@ -88,17 +88,24 @@ router.get("/posts/:id", withAuth, async (req, res) => {
         },
         {
           model: Comment,
-          attributes: ["contents"]
+          attributes: ["contents", "date_created", "user_id"],
+          include: [
+            {
+             model: User,
+             attributes:["username"]
+            }
+          ]
         },
       ],
     });
     // Serialize data so the template can read it
     const post = postData.get({ plain: true });
+    // console.log(post)
     res.render("addComment", {
       post,
       logged_in: req.session.logged_in,
     });
-    // res.json(posts)
+    // res.json(post)
   } catch (err) {
     console.log(err);
     res.status(500).json(err);

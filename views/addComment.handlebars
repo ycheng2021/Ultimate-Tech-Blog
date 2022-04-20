@@ -25,7 +25,7 @@
 {{#each post.comments as |comment| }} 
   <div class="card post-cards post-card">
     <div class="card-body">
-      <p class="card-text">{{comment.contents}}</p>
+      <p class="card-text">{{comment.contents}} </br> Posted by {{comment.user.username}} on {{format_date comment.date_created}}</p>
     </div>
   </div>
 {{/each}}
