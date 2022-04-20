@@ -41,6 +41,6 @@ This application does not have a license.
 
 Github Link: https://github.com/ycheng2021/Ultimate-Tech-Blog
 
-Deployed Link:
+Deployed Link: https://ancient-peak-76701.herokuapp.com/
 
 If you have any additional questions, feel free to reach me at annacheng09@hotmail.com
