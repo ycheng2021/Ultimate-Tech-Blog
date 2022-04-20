@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const { Post } = require('../../models');
-const { restore } = require('../../models/Comment');
 const withAuth = require('../../utils/auth');
 
 // make a post

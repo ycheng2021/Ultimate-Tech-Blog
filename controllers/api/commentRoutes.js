@@ -1,5 +1,4 @@
 const router = require("express").Router();
-const { redirect } = require("express/lib/response");
 const { Comment } = require("../../models");
 const withAuth = require('../../utils/auth');
 
