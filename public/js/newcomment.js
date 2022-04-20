@@ -1,20 +1,22 @@
-const commentBox = document.querySelector('.comment-box');
-const comments = document.querySelector('.container')
+const commentButton = document.querySelector('.addComment-btn');
+const commentBox = document.querySelector('.comment-box')
 
-comments.addEventListener('click', function() {
-    commentBox.style.display= "block"
+commentButton.addEventListener('click', function() {
+    commentButton.style.display = "none"
+    commentBox.style.display = "block"
 })
 
 // submit comment function
-const submitFormHandler = async (event) => {
-    event.preventDefault();
-
+const submitFormHandler = async () => {
     const contents = document.querySelector('#comment-content').value.trim();
+    const post_id = window.location.toString().split("/")[
+        window.location.toString().split("/").length - 1
+    ];
 
     if (contents) {
         const response = await fetch('/api/comments', {
         method: 'POST',
-        body: JSON.stringify({ contents }),
+        body: JSON.stringify({ contents, post_id}),
         headers: { 'Content-Type': 'application/json' },
         });
 

@@ -1,7 +1,22 @@
 [
     {
-        "contents": "CSS has always been my weak point but it helps when you're using bootstrap, where it kind of helps you format it a certain way.",
-        "post_id": 2,
+        "contents": "IT organizations can make changes now to attract and retain talent in a new era.",
+        "post_id": 6,
+        "user_id": 3
+    },
+    {
+        "contents": "In a post-COVID-19 business environment, trust and brand values can make or break a business deal more than ever before. ",
+        "post_id": 5,
         "user_id": 1
+    },
+    {
+        "contents": "There's been a lot of advancements in the use of analytics over the pandemic and one of the trends that we're seeing is companies continuing to invest aggressively. ",
+        "post_id": 3,
+        "user_id": 5
+    },
+    {
+        "contents": "Understanding and evaluating risk starts with using a standard framework and common set of definitions.",
+        "post_id": 7,
+        "user_id": 2
     }
 ]
