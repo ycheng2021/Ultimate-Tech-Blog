@@ -1,17 +1,37 @@
 [
     {
-        "username": "Sal",
-        "email": "sal@hotmail.com",
+        "username": "Karen Hao",
+        "email": "karenh@gmail.com",
         "password": "password12345"
     },
     {
-        "username": "Lernantino",
-        "email": "lernantino@gmail.com",
+        "username": "Randall Miller",
+        "email": "randall@hotmail.com",
         "password": "password12345"
     },
     {
-        "username": "Amiko",
-        "email": "amiko2k20@aol.com",
+        "username": "Traci Gusher",
+        "email": "tracig@aol.com",
+        "password": "password12345"
+    },
+    {
+        "username": "Geoff Vickrey",
+        "email": "geoffV@gmail.com",
+        "password": "password12345"
+    },
+    {
+        "username": "Greg Sarafin",
+        "email": "gregs@gmail.com",
+        "password": "password12345"
+    },
+    {
+        "username": "Jonathan Sears",
+        "email": "jsears@gmail.com",
+        "password": "password12345"
+    },
+    {
+        "username": "Marsha Reppy",
+        "email": "marshar@gmail.com",
         "password": "password12345"
     }
 ]

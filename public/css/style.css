@@ -25,19 +25,33 @@ nav a {
 
 .post-cards {
     background-color: rgb(170, 88, 247);
-    border: 1px black solid;
-    border-radius: 4px;
-    margin-bottom: 5px;
+    border: 1px rgb(86, 39, 131) solid;
+    border-radius: 10px;
+    margin-bottom: 20px;
     padding: 10px;
     color: white;
 }
 
+.sidebyside {
+    display: flex;
+}
+
+.delete-btn,
+.update-btn {
+    margin-right: 10px;
+}
+
+.addComment-btn,
+.delete-btn,
+.update-btn,
+.newPost-btn,
 .comment-btn,
 .submit-btn,
 .signup-btn,
 .login-btn {
     color: white !important;
     background-color: rgb(170, 88, 247) !important;
+    margin-bottom: 5px;
 }
 .loginform,
 .signupform {
@@ -63,6 +77,10 @@ nav a {
 }
 
 .comment-box {
+    display: none;
+}
+
+.update-box {
     display: none;
 }
 
